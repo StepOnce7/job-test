@@ -1,0 +1,20 @@
+domain: tutorial.kubeilder.io
+layout:
+- go.kubebuilder.io/v3
+projectName: job-test
+repo: kubebuilder_test/job-test
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: tutorial.kubeilder.io
+  group: batch
+  kind: CronJob
+  path: kubebuilder_test/job-test/api/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"
